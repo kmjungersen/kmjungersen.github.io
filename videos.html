@@ -1,25 +1,118 @@
 <!doctype html>
 <html>
   <head>
-      <title>Tennis Makeup video</title>
+      <title>Videos</title>
+
+      <link rel="stylesheet" href="stylesheets/styles.css">
+      <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
       <!-- Chang URLs to wherever Video.js files will be hosted -->
-      <link href="video-js/video-js.css" rel="stylesheet" type="text/css">
+      <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet" type="text/css">
       <!-- video.js must be in the <head> for older IEs to work. -->
-      <script src="video-js/video.js"></script>
+      <script src="//vjs.zencdn.net/4.12/video.js"></script>
 
       <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
       <script>
         videojs.options.flash.swf = "video-js/video-js.swf";
       </script>
 
+      <script type="text/javascript">
+          $(function() {
+             changeVideo()
+          });
+
+
+              function changeVideo() {
+
+                  var selection = document.getElementById("selector").value;
+
+                  var object = findObject(selection);
+
+                  changeTitle(object.title);
+
+                  changeVideoSrc(object.url)
+
+              }
+
+              function findObject(selection) {
+
+                  var newObject = null;
+
+                  var carnage = {
+                      url: "https://s3.amazonaws.com/kmjungersen/GoPro+Videos/Ski+Crash+Compilation+-+February+6th+2015.mp4",
+                      title: "Carnage on the Slopes"
+                  };
+                  var tennis = {
+                      url: "https://s3.amazonaws.com/kmjungersen/kmjungersen.github.io+documents/tennis+demo.mp4",
+                      title: "Tennis GoPro Demo"
+                  };
+
+                  switch(selection) {
+
+                      case "slope_carnage":
+
+                          newObject = carnage;
+
+                          break;
+
+                      case "tennis":
+
+                          newObject = tennis;
+
+                          break;
+
+                      default:
+
+                          newObject = carnage;
+
+                          break;
+
+                  }
+
+                  return newObject
+              }
+
+            function changeVideoSrc(url) {
+
+                var foo = videojs("video_player");
+
+                foo.src(url);
+
+                foo.load();
+
+            }
+
+          function changeTitle(title) {
+
+              var element = document.getElementById("title");
+
+              element.innerHTML = title
+          }
+
+
+
+
+      </script>
+
   </head>
 
-  <video id="Tennis video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="1000" height="640"
+  <body>
+
+    <h2>Videos</h2>
+
+    Please select a video to watch:
+    <select id="selector" onchange="changeVideo();">
+        <option value="slope_carnage">Carnage on the Slopes</option>
+        <option value="tennis">Tennis video</option>
+    </select>
+
+
+      <video id="video_player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="1000" height="640"
       data-setup='{}' align="middle">
 
-      <source src="https://s3.amazonaws.com/kmjungersen/kmjungersen.github.io+documents/tennis+demo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+          Your browser does not support the video tag.
 
     </video>
 
