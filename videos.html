@@ -9,9 +9,9 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
       <!-- Chang URLs to wherever Video.js files will be hosted -->
-      <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet" type="text/css">
+      <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet" type="text/css">
       <!-- video.js must be in the <head> for older IEs to work. -->
-      <script src="//vjs.zencdn.net/4.12/video.js"></script>
+      <script src="https://vjs.zencdn.net/4.12/video.js"></script>
 
       <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
       <script>
@@ -19,6 +19,7 @@
       </script>
 
       <script type="text/javascript">
+
           $(function() {
              changeVideo()
           });
@@ -30,7 +31,7 @@
 
                   var object = findObject(selection);
 
-                  changeTitle(object.title);
+//                  changeTitle(object.title);
 
                   changeVideoSrc(object.url)
 
@@ -77,6 +78,7 @@
             function changeVideoSrc(url) {
 
                 var foo = videojs("video_player");
+                console.log(foo);
 
                 foo.src(url);
 
@@ -90,9 +92,6 @@
 
               element.innerHTML = title
           }
-
-
-
 
       </script>
 
