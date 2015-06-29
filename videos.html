@@ -49,6 +49,10 @@
                       url: "https://s3.amazonaws.com/kmjungersen/kmjungersen.github.io+documents/tennis+demo.mp4",
                       title: "Tennis GoPro Demo"
                   };
+                  var zombie = {
+                      url: "https://s3.amazonaws.com/kmjungersen/kmjungersen.github.io+documents/Zombie+Defense+Training+Camp.mp4",
+                      title: "Zombie Defense Training Camp"
+                  };
 
                   switch(selection) {
 
@@ -61,6 +65,12 @@
                       case "tennis":
 
                           newObject = tennis;
+
+                          break;
+
+                      case "zombie":
+
+                          newObject = zombie;
 
                           break;
 
@@ -104,7 +114,8 @@
     Please select a video to watch:
     <select id="selector" onchange="changeVideo();">
         <option value="slope_carnage">Carnage on the Slopes</option>
-        <option value="tennis">Tennis video</option>
+        <option value="tennis">Tennis Demo</option>
+        <option value="zombie">Zombie Defense Training Camp (Skeet Shooting)</option>
     </select>
 
 
