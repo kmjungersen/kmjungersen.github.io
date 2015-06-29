@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+`<html>
   <head>
       <title>Videos</title>
 
@@ -21,6 +21,14 @@
       <script type="text/javascript">
 
           $(function() {
+
+              var video = getParameterByName("video");
+
+              if (video.length > 0) {
+                  var selector = document.getElementById("selector");
+                  selector.value = video;
+              }
+
              changeVideo()
           });
 
@@ -88,7 +96,7 @@
             function changeVideoSrc(url) {
 
                 var foo = videojs("video_player");
-                console.log(foo);
+//                console.log(foo);
 
                 foo.src(url);
 
@@ -101,6 +109,14 @@
               var element = document.getElementById("title");
 
               element.innerHTML = title
+          }
+
+//        Borrowed from a Stack overflow post at http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+          function getParameterByName(name) {
+              name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+              var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                  results = regex.exec(location.search);
+              return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
           }
 
       </script>
