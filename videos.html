@@ -61,6 +61,10 @@
                       url: "https://s3.amazonaws.com/kmjungersen/kmjungersen.github.io+documents/Zombie+Defense+Training+Camp.mp4",
                       title: "Zombie Defense Training Camp"
                   };
+                  var teddy={
+                      url: "https://s3.amazonaws.com/kmjungersen/kmjungersen.github.io+documents/teddy.MP4",
+                      title: "Teddy"
+                  };
 
                   switch(selection) {
 
@@ -79,6 +83,12 @@
                       case "zombie":
 
                           newObject = zombie;
+
+                          break;
+
+                      case "teddy":
+
+                          newObject = teddy;
 
                           break;
 
@@ -132,6 +142,7 @@
         <option value="slope_carnage">Carnage on the Slopes</option>
         <option value="tennis">Tennis Demo</option>
         <option value="zombie">Zombie Defense Training Camp (Skeet Shooting)</option>
+        <option value="teddy">Teddy (First Person View)</option>
     </select>
 
 
