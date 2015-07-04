@@ -118,7 +118,6 @@
             function changeVideoSrc(url) {
 
                 var foo = videojs("video_player");
-//                console.log(foo);
 
                 foo.src(url);
 
@@ -145,26 +144,37 @@
 
   </head>
 
-  <body>
+  <body class="videoPage">
+    <div class="wrapper">
+        <header>
+            <b class="title">Kurtis Jungersen - Videos</b>
+            <ul class="nav_bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://www.github.com/kmjungersen">Github</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="thesis.html">Thesis</a></li>
+            </ul>
+        </header>
 
-    <h2>Videos</h2>
+    <div class="standardSection">
+        <p>Please select a video to watch:
 
-    Please select a video to watch:
-    <select id="selector" onchange="changeVideo();">
-        <option value="slope_carnage">Carnage on the Slopes</option>
-        <option value="tennis">Tennis Demo</option>
-        <option value="zombie">Zombie Defense Training Camp (Skeet Shooting)</option>
-        <option value="teddy">Teddy (First Person View)</option>
-    </select>
+        <select id="selector" onchange="changeVideo();">
+            <option value="slope_carnage">Carnage on the Slopes</option>
+            <option value="tennis">Tennis Demo</option>
+            <option value="zombie">Zombie Defense Training Camp (Skeet Shooting)</option>
+            <option value="teddy">Teddy (First Person View)</option>
+            <option value="fry_night">Friday Night Fish Fry</option>
+        </select>
+</p>
 
+          <video id="video_player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="510"
+            data-setup='{}' align="middle">Your browser does not support the video tag.
+          </video>
 
-      <video id="video_player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="1000" height="640"
-      data-setup='{}' align="middle">
+    </div>
 
-          Your browser does not support the video tag.
-
-    </video>
-
+    </div>
   </body>
 
 </html>
