@@ -125,7 +125,11 @@ header ul a {
   text-align:center;
   padding-top:6px;
   height:30px;
-    padding-bottom: 30px;
+    /*padding-bottom: 30px;*/
+}
+
+header ul a:hover {
+    background-color: #eaeaea;
 }
 
 strong {
