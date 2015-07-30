@@ -1,0 +1,70 @@
+.headshot img {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.navbar .container-fluid {
+    padding: 0 10% 0 10%;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    transition: color 0.2s ease-out;
+    border-radius: 10px;
+    background-color: #DFDFDF;
+}
+
+.navbar-default .navbar-brand:hover {
+    background-color: #DFDFDF;
+}
+
+.main-content {
+    padding: 0 20px 0 20px;
+}
+
+.main-content p {
+    margin-bottom: 30px;
+    font-size: 14pt;
+}
+
+.row {
+    padding: 0 50px 20px 50px;
+}
+
+#footer {
+    padding-top: 20px;
+    border-top: 1px solid #e7e7e7;
+    background-image: linear-gradient(to top,#fff 0,#f8f8f8 100%);
+}
+
+
+.polaroid {
+  position: relative;
+  width: auto;
+}
+
+.polaroid img {
+    width:100%;
+  border: 10px solid #DFDFDF;
+  border-bottom: 45px solid #DFDFDF;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+          box-shadow: 3px 3px 3px #777;
+}
+
+.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
+}
+
+.sticky-footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
