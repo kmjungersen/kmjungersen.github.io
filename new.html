@@ -40,69 +40,9 @@
 </head>
 <body>
 
-<!--<header id="header">-->
-<!--<nav class="navbar navbar-default navbar-fixed-top">-->
-<!--<div class="container-fluid">-->
-<!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
-<!--<div class="navbar-header">-->
-<!--<button type="button" class="navbar-toggle collapsed"-->
-<!--data-toggle="collapse"-->
-<!--data-target="#bs-example-navbar-collapse-1"-->
-<!--aria-expanded="false">-->
-<!--<span class="sr-only">Toggle navigation</span>-->
-<!--<span class="icon-bar"></span>-->
-<!--<span class="icon-bar"></span>-->
-<!--<span class="icon-bar"></span>-->
-<!--</button>-->
-<!--<a class="navbar-brand" href="#">Kurtis Jungersen</a>-->
-<!--</div>-->
+<div class="main">
 
-<!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
-<!--<div class="collapse navbar-collapse"-->
-<!--id="bs-example-navbar-collapse-1">-->
-
-
-<!--<ul class="nav navbar-nav navbar-right">-->
-<!--<li><a href="index.html">Home</a></li>-->
-<!--<li>-->
-<!--<a href="http://www.github.com/kmjungersen">Github</a>-->
-<!--</li>-->
-<!--<li><a href="resume.html">Resume</a></li>-->
-<!--<li><a href="thesis.html">Thesis</a></li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
-<!--</div>-->
-<!--&lt;!&ndash; /.container-fluid &ndash;&gt;-->
-<!--</nav>-->
-<!--</header>-->
-
-<div id="cbp-so-scroller" class="main">
-    <!--<div id="cbp-so-scroller" class="cbp-so-scroller">-->
-    <!--<div id="cbp-fbscroller" class="cbp-fbscroller">-->
-    <!--<nav>-->
-    <!--<a href="#fbsection1" class="cbp-fbcurrent">Section 1</a>-->
-    <!--<a href="#fbsection2">Section 2</a>-->
-    <!--<a href="#fbsection3">Section 3</a>-->
-    <!--<a href="#fbsection4">Section 4</a>-->
-    <!--<a href="#fbsection5">Section 5</a>-->
-    <!--</nav>-->
-    <section class="section active odd-panel ">
-            <article class="cbp-so-side cbp-so-side-left">
-                <h2>Hi,I'm Kurtis</h2>
-            </article>
-            <figure class="cbp-so-side cbp-so-side-right">
-                <div class="polaroid">
-                    <img src="static/images/personal_site_picture.jpg">
-
-                    <p>Florida Keys, 2014</p>
-                    <br/>
-                </div>
-            </figure>
-
-    </section>
-
-    <section class="section even-panel cbp-so-section active">
+    <section class="odd-panel">
         <!--<div class="cbp-so-section">-->
         <article class="cbp-so-side cbp-so-side-left">
             <h2>Hi,I'm Kurtis</h2>
@@ -118,52 +58,32 @@
         <!--</div>-->
     </section>
 
-    <section class="section odd-panel">
+    <section class="even-panel">
+        <!--<div class="cbp-so-section">-->
+        <article class="cbp-so-side cbp-so-side-left">
+            <h2>Hi,I'm Kurtis</h2>
+        </article>
+        <figure class="cbp-so-side cbp-so-side-right">
+            <div class="polaroid">
+                <img src="static/images/personal_site_picture.jpg">
+
+                <p>Florida Keys, 2014</p>
+                <br/>
+            </div>
+        </figure>
+        <!--</div>-->
+    </section>
+
+    <section class="odd-panel">
         <h2>foo</h2>
 
     </section>
 
-    <section class="section even-panel">
+    <section class="even-panel">
         <h2>foo</h2>
 
     </section>
 
-
-
-    <!--<section id="fbsection1">-->
-    <!--<div class="cbp-so-section">-->
-    <!--<article class="cbp-so-side cbp-so-side-left">-->
-    <!--<h2>Hi,I'm Kurtis</h2>-->
-    <!--</article>-->
-    <!--<figure class="cbp-so-side cbp-so-side-right">-->
-    <!--<div class="polaroid">-->
-    <!--<img src="static/images/personal_site_picture.jpg">-->
-
-    <!--<p>Florida Keys, 2014</p>-->
-    <!--<br/>-->
-    <!--</div>-->
-    <!--</figure>-->
-    <!--</div>-->
-
-    <!--</section>-->
-    <!--<section id="fbsection2">-->
-    <!--<section class="cbp-so-section">-->
-    <!--<figure class="cbp-so-side cbp-so-side-left">-->
-    <!--<img src="static/images/isd-logo-lg.png">-->
-    <!--</figure>-->
-    <!--<article class="cbp-so-side cbp-so-side-right">-->
-    <!--<h2>I'm a Software Developer</h2>-->
-
-    <!--<p> at <a href="http://infinity-software.com">Infinity-->
-    <!--Software Development</a> in Tallahassee, FL.</p>-->
-    <!--</article>-->
-    <!--</section>-->
-    <!--</section>-->
-    <!--<section id="fbsection3"></section>-->
-    <!--<section id="fbsection4"></section>-->
-    <!--<section id="fbsection5"></section>-->
-    <!--</div>-->
-<!--</div>-->
 </div>
 
 
@@ -185,7 +105,7 @@
     $(function () {
 //        cbpFixedScrollLayout.init();
 
-        $("#cbp-so-scroller").onepage_scroll({
+        $(".main").onepage_scroll({
             sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
             easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                                              // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
@@ -207,9 +127,15 @@
     });
 </script>
 <script>
-    $(function () {
-//            new cbpScroller('#cpb-so-scroller');
-    });
+//    $(function () {
+//        $(".main").onepage_scroll({
+//            sectionContainer: "section",
+//            easing: "ease",
+//            animationTime: 1000,
+//            pagination: true,
+//            updateURL: false
+//        });
+//    });
 
 </script>
 </body>
