@@ -3,12 +3,18 @@ body {
     background-color: #000000;
 }
 
-.prof-pic {
-    position: relative;
-    width: auto;
+a {
+    text-decoration: underline;
 }
 
+a:hover {
+    color: darkgrey;
+}
+
+
 .prof-pic {
+    /*position: relative;*/
+    /*width: auto;*/
     width: 100%;
     display: block;
     position: relative;
@@ -19,25 +25,66 @@ body {
     /*margin-top: 0;*/
 /*}*/
 
-#main-page {
+#section-1 {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/GOPR0240.JPG") center no-repeat;
+    background-size: cover;
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+}
+
+#section-2 {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/destin-panorama.JPG") center no-repeat;
+    background-size: cover;
+}
+
+#section-3 {
+    /*background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/gopro-skiing-big-accorn.mp4") center no-repeat;*/
+    /*background-size: cover;*/
+}
+
+#section-4 {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/rotunda.JPG") center no-repeat;
+    background-size: cover;
+}
+
+#section-4 img {
+    border-radius: 50%;
+}
+
+#section-5 {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/clouds.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#section-6 {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/ny-skyline.JPG") center no-repeat;
+    background-size: cover;
+}
+
+.cbp-so-section {
     width: 100%;
     display: block;
     position: relative;
-}
-
-#main-page::after{
-    content: "";
-    background: url("../images/GOPR0240.JPG");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.4;
-    top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    position: absolute;
     z-index: -1;
+}
+
+
+video {
+    opacity: 0.5;
+    position: fixed;
+    /* top: 50%; */
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%);
+    background-image: url("../images/clouds.jpg");
+    background-size: cover;
 }
 
 #shrinking-navbar {
