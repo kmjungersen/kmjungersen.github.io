@@ -801,7 +801,7 @@ control positioning and full window mode. **
   /* Allow poster to be vertically aligned. */
 
   vertical-align: middle;
-  /*  display: table-cell; */
+  /* display: table-cell; */
   /*This works in Safari but not Firefox.*/
 
   /* Provide some basic defaults for fonts */
