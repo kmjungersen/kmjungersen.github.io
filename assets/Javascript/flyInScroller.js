@@ -84,14 +84,14 @@
 		},
 		_init : function() {
 			if( Modernizr.touch ) return;
-			this.sections = Array.prototype.slice.call( this.el.querySelectorAll( '.cbp-so-section' ) );
+			this.sections = Array.prototype.slice.call( this.el.querySelectorAll( '.flyIn-section' ) );
 			this.didScroll = false;
 
 			var self = this;
 			// the sections already shown...
 			this.sections.forEach( function( el, i ) {
 				if( !inViewport( el ) ) {
-					classie.add( el, 'cbp-so-init' );
+					classie.add( el, 'flyIn-init' );
 				}
 			} );
 
@@ -120,13 +120,13 @@
 
 			this.sections.forEach( function( el, i ) {
 				if( inViewport( el, self.options.viewportFactor ) ) {
-					classie.add( el, 'cbp-so-animate' );
+					classie.add( el, 'flyIn-animate' );
 				}
 				else {
 					// this add class init if it doesn't have it. This will ensure that the items initially in the viewport will also animate on scroll
-					classie.add( el, 'cbp-so-init' );
+					classie.add( el, 'flyIn-init' );
 					
-					classie.remove( el, 'cbp-so-animate' );
+					classie.remove( el, 'flyIn-animate' );
 				}
 			});
 			this.didScroll = false;
