@@ -1,35 +1,36 @@
+/* Overall Styling */
+@font-face {
+    font-family: materialize-papercraft;
+    src: url("/bower_components/materialize/font/roboto/Roboto-Bold.woff")
+}
+
+html {
+    font-family: Lato, sans-serif;
+    color: #f5f5f5;
+}
+
 body {
-    /* background-color: #184A69; */
     background-color: #000000;
 }
 
 a {
     text-decoration: underline;
+    color: #36A0CA;
 }
 
 a:hover {
-    color: darkgrey;
+    /*TODO: fix this*/
+    color: #68C3EF;
 }
 
-
-.prof-pic {
-    /*position: relative;*/
-    /*width: auto;*/
-    width: 100%;
-    display: block;
-    position: relative;
-    border-radius: 15px;
+.section {
+    padding: 0;
 }
 
-/*.cbp-so-scroller {*/
-    /*margin-top: 0;*/
-/*}*/
-
+/* Section Background Image Definitions */
 #section-1 {
     background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/GOPR0240.JPG") center no-repeat;
     background-size: cover;
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
 }
 
 #section-2 {
@@ -61,7 +62,7 @@ a:hover {
     background-size: cover;
 }
 
-.cbp-so-section {
+.flyIn-section {
     width: 100%;
     display: block;
     position: relative;
@@ -71,7 +72,18 @@ a:hover {
     z-index: -1;
 }
 
+.flyIn-section article {
+    width: 100%;
+    padding: 10% 30%;
+}
 
+.flyIn-right,
+.flyIn-left {
+    padding: 0;
+}
+
+
+/* Live View Panel */
 video {
     opacity: 0.5;
     position: fixed;
@@ -87,8 +99,40 @@ video {
     background-size: cover;
 }
 
-#shrinking-navbar {
-    color: white;
-    padding: 20px;
-    background-image: linear-gradient(to bottom,black 0,black 100%);;
+/*Side Navbar*/
+
+ul.onepage-pagination li a:before,
+ul.onepage-pagination li a.active:before {
+    background: none;
+    border: none
+}
+
+ul.onepage-pagination {
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+
+ul.onepage-pagination li a.active {
+    list-style: none;
+    background-image: url("../icons/arrow-alt-right.png") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+
+}
+
+.onepage-pagination li a {
+    height: 10px;
+    width: 10px;
+    border-width: 2px 2px 2px 0;
+    border-style: solid;
+    border-color: #f5f5f5;
+    border-radius: 6px;
+}
+
+/*Contact Panel*/
+#contact-email {
+    padding-top: 10%;
 }
