@@ -115,7 +115,7 @@ nav {
 
 
 /* Live View Panel */
-video {
+section video {
     opacity: 0.5;
     position: fixed;
     /* top: 50%; */

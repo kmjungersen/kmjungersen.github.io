@@ -100,5 +100,4 @@ $(function () {
 
     var footerElement = $(".page-footer");
     stickyFooter(footerElement);
-
 });
