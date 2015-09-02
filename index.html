@@ -36,10 +36,20 @@
 
 <div id="main-page">
     <section id="section-1" class="flyIn-section">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">Kurtis Jungersen</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="http://github.com/kmjungersen">Github</a></li>
+                    <li><a href="/videos.html">Videos</a></li>
+                    <li><a href="">JavaScript</a></li>
+                </ul>
+            </div>
+        </nav>
         <article class="center flyIn-bottom">
             <h2>Hi,I'm Kurtis</h2>
         </article>
-        <div class="arrow bounce"></div>
+            <div id="bouncing-arrow" class="tooltipped arrow bounce" data-position="top" data-tooltip="Scroll down to begin!"></div>
     </section>
     <section id="section-2" class="flyIn-section">
         <article class="center flyIn-bottom">
@@ -48,7 +58,7 @@
             <p> at <a href="http://infinity-software.com">Infinity
                 Software Development</a> in Tallahassee, FL.</p>
         </article>
-        <div class="arrow bounce"></div>
+        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-3" class="flyIn-section">
         <video id="video" class="video-background" autoplay loop muted>
@@ -65,7 +75,7 @@
 
         </article>
 
-        <div class="arrow bounce"></div>
+        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-4" class="flyIn-section">
         <article class="center flyIn-bottom">
@@ -74,7 +84,7 @@
             <p><a href="http://www.seas.virginia.edu">with a B.S. in Mechanical
                 Engineering</a></p>
         </article>
-        <div class="arrow bounce"></div>
+        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-5" class="flyIn-section">
         <article class="center flyIn-bottom">
@@ -83,7 +93,7 @@
             <p><a href="http://www.github.com/kmjungersen">to see what I build
                 for work (and play).</a></p>
         </article>
-        <div class="arrow bounce"></div>
+        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-6" class="flyIn-section">
         <div class="container">
@@ -93,13 +103,13 @@
                 </a>
             </h2>
         </div>
-        <!--<footer class="page-footer">-->
-            <!--<div class="footer-copyright">-->
-                <!--<div class="center container">-->
-                    <!--&copy; Kurtis M Jungersen, 2015-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</footer>-->
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="center container">
+                    &copy; Kurtis M Jungersen, 2015
+                </div>
+            </div>
+        </footer>
     </section>
 </div>
 <!--</div>-->
@@ -113,7 +123,8 @@
         type="text/javascript"></script>
 <script src="bower_components/materialize/dist/js/materialize.min.js"
         type="text/javascript"></script>
-
+<script src="assets/Javascript/main.js"
+        type="text/javascript"></script>
 
 <script>
     $("#main-page").onepage_scroll({
@@ -135,7 +146,7 @@
 //            setTimeout(function () {
 //                $(".flyIn-section").removeClass("flyIn-animate");
 
-                $('.active').addClass('flyIn-animate');
+            $('.active').addClass('flyIn-animate');
 //            }, 300);
         },   // This option accepts a callback function. The function will be called after the page moves.
         loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
@@ -149,6 +160,8 @@
     $(function () {
         $(".flyIn-section").addClass("flyIn-init");
         $("section.active").addClass("flyIn-animate");
+
+
     });
 
 </script>
