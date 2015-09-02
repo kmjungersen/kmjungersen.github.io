@@ -1,66 +1,55 @@
 <!doctype html>
-`<html>
-  <head>
-      <title>Videos</title>
 
-      <link rel="stylesheet" href="assets/stylesheets/styles.css">
-      <link rel="stylesheet" href="assets/stylesheets/pygment_trac.css">
+<html>
+<head>
+    <title>Videos</title>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-      <!-- Chang URLs to wherever Video.js files will be hosted -->
-      <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet" type="text/css">
-      <!-- video.js must be in the <head> for older IEs to work. -->
-      <script src="https://vjs.zencdn.net/4.12/video.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-      <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
-      <script>
-        videojs.options.flash.swf = "video-js/video-js.swf";
-      </script>
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet"
+          type="text/css">
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script src="https://vjs.zencdn.net/4.12/video.js"></script>
 
-      <script type="text/javascript">
+    <link href="assets/stylesheets/site.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/videos.css" rel="stylesheet"
+          type="text/css">
 
-        <header>
-            <b class="title">Kurtis Jungersen - Videos</b>
-            <ul class="nav_bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="http://www.github.com/kmjungersen">Github</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="thesis.html">Thesis</a></li>
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">Kurtis Jungersen</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="http://github.com/kmjungersen">Github</a></li>
+                <li><a href="/videos.html">Videos</a></li>
+                <li><a href="">JavaScript</a></li>
             </ul>
-        </header>
+        </div>
+    </nav>
+</header>
+<main>
 
-    <div class="standardSection">
-        <p>Please select a video to watch:
+    <select id="videoSelector" onchange="changeVideo();">
+    <option value="carnage">Carnage on the Slopes</option>
+    <option value="tennis">Tennis Demo</option>
+    <option value="zombie">Zombie Defense Training Camp (Skeet
+    Shooting)
+    </option>
+    <option value="teddy">Teddy (First Person View)</option>
+    <option value="fryNight">Friday Night Fish Fry</option>
+    </select>
+    <video id="videoPlayer"
+           class="video-js vjs-default-skin vjs-big-play-centered" controls
+           preload="auto" width="100%" height="510"
+           data-setup='{}' align="middle">Your browser does not support the
+        video tag.
+    </video>
+</main>
+<script src="assets/Javascript/videoPage.js" type="text/javascript"></script>
 
-            <select id="selector" onchange="changeVideo();">
-                <option value="slope_carnage">Carnage on the Slopes</option>
-                <option value="tennis">Tennis Demo</option>
-                <option value="zombie">Zombie Defense Training Camp (Skeet Shooting)</option>
-                <option value="teddy">Teddy (First Person View)</option>
-                <option value="fry_night">Friday Night Fish Fry</option>
-            </select>
-        </p>
-
-          <video id="video_player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="510"
-            data-setup='{}' align="middle">Your browser does not support the video tag.
-          </video>
-
-    </div>
-
-    <footer>
-
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist.</a></small></p>
-
-        <p><small>&copy; Copyright 2015 by Kurtis Jungersen</small></p>
-
-        <!--Twitter follow button-->
-        <a href="https://twitter.com/kmjungersen" class="twitter-follow-button" data-show-count="false">Follow @kmjungersen</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-    </footer>
-
-    </div>
-  </body>
+</body>
 
 </html>
