@@ -11,7 +11,7 @@ html {
 
 body {
     background-color: #000000;
-}
+  }
 
 a {
     text-decoration: underline;
@@ -23,8 +23,33 @@ a:hover {
     color: #68C3EF;
 }
 
+/*Top Navbar Styling*/
+
+nav {
+    background-color: rgba(0,0,0,0.4);
+    /*opacity: 0.4;*/
+    color: white;
+    height: 3em;
+}
+
+.nav-wrapper {
+    line-height: 3em;
+}
+
+    .nav-wrapper .brand-logo {
+        font-size: 1.6em;
+        padding-left: 2em;
+    }
+
+    .nav-wrapper #nav-mobile li:hover {
+        background-color: rgba(0,0,0,0.3);
+        /*border-radius: 1em;*/
+    }
+
+/*Section Styling*/
+
 .section {
-    padding: 0;
+    padding-top: 0;
 }
 
 /* Section Background Image Definitions */
@@ -72,10 +97,16 @@ a:hover {
     z-index: -1;
 }
 
-.flyIn-section article {
-    width: 100%;
-    padding: 10% 30%;
-}
+    .flyIn-section article {
+        width: 100%;
+        padding: 10% 25%;
+        color: #f5f5f5;
+    }
+
+    .flyIn-section article h2 {
+        font-weight: 100;
+    }
+
 
 .flyIn-right,
 .flyIn-left {
@@ -101,38 +132,55 @@ video {
 
 /*Side Navbar*/
 
-ul.onepage-pagination li a:before,
-ul.onepage-pagination li a.active:before {
+.onepage-pagination li a:before,
+.onepage-pagination li a.active:before {
     background: none;
     border: none
 }
 
-ul.onepage-pagination {
+.onepage-pagination {
     list-style-type: none;
     padding: 0;
     margin:0;
 }
 
-ul.onepage-pagination li a.active {
-    list-style: none;
-    background-image: url("../icons/arrow-alt-right.png") ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-right: 10px;
+    .onepage-pagination li {
+        /*padding: 0;*/
+    }
 
-}
+    .onepage-pagination li a {
+        height: 10px;
+        width: 10px;
+        border-right: 1px solid #f5f5f5;
+        /*border-radius: 6px;*/
+    }
 
-.onepage-pagination li a {
-    height: 10px;
-    width: 10px;
-    border-width: 2px 2px 2px 0;
-    border-style: solid;
-    border-color: #f5f5f5;
-    border-radius: 6px;
-}
+    .onepage-pagination li a.active {
+        list-style: none;
+        border-right: 3px solid #f5f5f5;
+        background: url("../icons/arrow-alt-right.png") no-repeat center;
+        background-size: cover;
+        /*background-color: #DCDCDC;*/
+        margin-right: 10px;
+    }
+
+    .onepage-pagination li a:hover {
+
+    }
 
 /*Contact Panel*/
 #contact-email {
     padding-top: 10%;
+}
+
+/*Page Footer*/
+footer.page-footer {
+    /*TODO: fix this hack....*/
+    margin-top: 0;
+    position: absolute;
+    /*top: 95%;*/
+    width: 100%;
+    height: 3em;
+    padding: 0;
+    background: rgba(0,0,0,0.4);
 }
