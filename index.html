@@ -14,21 +14,15 @@
           rel="stylesheet">
     <link href="assets/stylesheets/bouncing-chevron.css" rel="stylesheet"
           type="text/css">
-
     <link href="assets/stylesheets/flyIn-component.css" rel="stylesheet"
           type="text/css">
-
     <link href="bower_components/onepage-scroll/onepage-scroll.css"
           rel="stylesheet" type="text/css">
-
-    <!--<link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"-->
-    <!--rel="stylesheet" type="text/css">-->
     <link href="bower_components/materialize/dist/css/materialize.min.css"
           rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="assets/stylesheets/site.css">
 
-    <script src="assets/Javascript/modernizr.custom.js"></script>
 
 </head>
 
@@ -49,7 +43,8 @@
         <article class="center flyIn-bottom">
             <h2>Hi,I'm Kurtis</h2>
         </article>
-            <div id="bouncing-arrow" class="tooltipped arrow bounce" data-position="top" data-tooltip="Scroll down to begin!"></div>
+        <div id="bouncing-arrow" class="tooltipped arrow bounce"
+             data-position="top" data-tooltip="Scroll down to begin!"></div>
     </section>
     <section id="section-2" class="flyIn-section">
         <article class="center flyIn-bottom">
@@ -58,7 +53,6 @@
             <p> at <a href="http://infinity-software.com">Infinity
                 Software Development</a> in Tallahassee, FL.</p>
         </article>
-        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-3" class="flyIn-section">
         <video id="video" class="video-background" autoplay loop muted>
@@ -66,16 +60,12 @@
             <source src="https://s3.amazonaws.com/kmjungersen.github.io.documents/videos/gopro-skiing-big-accorn.mp4"
                     type="video/mp4">
         </video>
-
         <article class="center flyIn-bottom">
             <h2>I love to shoot and edit video,</h2>
 
             <p><a href="videos.html">so check out some of my stuff here.</a>
             </p>
-
         </article>
-
-        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-4" class="flyIn-section">
         <article class="center flyIn-bottom">
@@ -84,7 +74,6 @@
             <p><a href="http://www.seas.virginia.edu">with a B.S. in Mechanical
                 Engineering</a></p>
         </article>
-        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-5" class="flyIn-section">
         <article class="center flyIn-bottom">
@@ -93,7 +82,6 @@
             <p><a href="http://www.github.com/kmjungersen">to see what I build
                 for work (and play).</a></p>
         </article>
-        <!--<div class="arrow bounce"></div>-->
     </section>
     <section id="section-6" class="flyIn-section">
         <div class="container">
@@ -112,11 +100,11 @@
         </footer>
     </section>
 </div>
-<!--</div>-->
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
-<script src="bower_components/modernizer/modernizr.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"
+        type="text/javascript"></script>
+<script src="bower_components/modernizer/modernizr.js"
+        type="text/javascript"></script>
 <script src="bower_components/onepage-scroll/jquery.onepage-scroll.min.js"
         type="text/javascript"></script>
 <script src="assets/Javascript/video-js/video.js"
@@ -125,50 +113,6 @@
         type="text/javascript"></script>
 <script src="assets/Javascript/main.js"
         type="text/javascript"></script>
-
-<script>
-    $("#main-page").onepage_scroll({
-        sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-        easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-                                         // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-        animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-        pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-        updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-        beforeMove: function (index) {
-
-            var activePanel = $('.active');
-
-            activePanel.addClass('flyIn-init');
-            activePanel.removeClass('flyIn-animate');
-
-        },  // This option accepts a callback function. The function will be called before the page moves.
-        afterMove: function (index) {
-//            setTimeout(function () {
-//                $(".flyIn-section").removeClass("flyIn-animate");
-
-            $('.active').addClass('flyIn-animate');
-//            }, 300);
-        },   // This option accepts a callback function. The function will be called after the page moves.
-        loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-        keyboard: true,                  // You can activate the keyboard controls
-        responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-        // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-        // the browser's width is less than 600, the fallback will kick in.
-        direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
-    });
-
-    $(function () {
-        $(".flyIn-section").addClass("flyIn-init");
-        $("section.active").addClass("flyIn-animate");
-
-
-    });
-
-</script>
-
-<script>
-    videojs.options.flash.swf = "video-js/video-js.swf";
-</script>
 
 </body>
 
