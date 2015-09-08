@@ -14,7 +14,6 @@ body {
   }
 
 a {
-    text-decoration: underline;
     color: #36A0CA;
 }
 
@@ -26,23 +25,32 @@ a:hover {
 /*Top Navbar Styling*/
 
 nav {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0);
     /*opacity: 0.4;*/
     color: white;
     height: 3em;
+    box-shadow: none;
 }
 
 .nav-wrapper {
-    line-height: 3em;
+    line-height: 1.5em;
 }
 
     .nav-wrapper .brand-logo {
         font-size: 1.6em;
-        padding-left: 2em;
+        padding: 1em 2em;
+    }
+
+    .nav-wrapper ul {
+        padding-right: 1em;
+    }
+
+    .nav-wrapper #nav-mobile li {
+        padding: 1.5em;
     }
 
     .nav-wrapper #nav-mobile li:hover {
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0);
         /*border-radius: 1em;*/
     }
 
@@ -182,5 +190,19 @@ footer.page-footer {
     width: 100%;
     height: 3em;
     padding: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0);
+}
+
+/*Bouncing Indicator*/
+.arrow {
+    width: 3px;
+    height: 3px;
+}
+
+.click-down {
+    height: 25%;
+    width: 25%;
+    position: fixed;
+    bottom: 0;
+    left: 37.5%;
 }
