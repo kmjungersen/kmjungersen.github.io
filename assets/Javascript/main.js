@@ -4,7 +4,9 @@
 
 $(function () {
 
-    $("#main-page").onepage_scroll({
+    var scroller = $("#main-page");
+
+    scroller.onepage_scroll({
         sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
         easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                                          // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
@@ -28,53 +30,15 @@ $(function () {
         direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
     });
 
+    var clickableArea = $(".click-down");
+    clickableArea.click(function() {
+        console.log("foo");
+       scroller.moveDown();
+    });
+
     $(".flyIn-section").addClass("flyIn-init");
     $("section.active").addClass("flyIn-animate");
     videojs.options.flash.swf = "video-js/video-js.swf";
-
-    function prepareTooltips() {
-
-        var paginationTabs = $(".onepage-pagination").find("a");
-
-        $.each(paginationTabs, function (i, e) {
-
-            var element = $(e);
-            var index = element.attr("data-index");
-
-            var tooltipData = panelInfo[index].tooltip;
-
-            element.addClass("tooltipped");
-            element.attr("data-position", "left");
-            element.attr("data-tooltip", tooltipData);
-        });
-
-        $(".tooltipped").tooltip({
-            delay: 0
-        });
-    }
-
-    var panelInfo = {
-        "1": {
-            tooltip: "Hello"
-        },
-        "2": {
-            tooltip: "Work"
-        },
-        "3": {
-            tooltip: "Play"
-        },
-        "4": {
-            tooltip: "School"
-        },
-        "5": {
-            tooltip: "Github"
-        },
-        "6": {
-            tooltip: "Contact"
-        }
-    };
-
-    prepareTooltips();
 
     function stickyFooter(footerElement) {
 
