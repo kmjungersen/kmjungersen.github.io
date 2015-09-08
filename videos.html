@@ -12,34 +12,40 @@
           type="text/css">
     <!-- video.js must be in the <head> for older IEs to work. -->
     <script src="https://vjs.zencdn.net/4.12/video.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'
+          type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="bower_components/materialize/dist/css/materialize.min.css"
+          rel="stylesheet" type="text/css">
 
     <link href="assets/stylesheets/site.css" rel="stylesheet" type="text/css">
     <link href="assets/stylesheets/videos.css" rel="stylesheet"
           type="text/css">
 
 <body>
-<header>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="/" class="brand-logo">Kurtis Jungersen</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="http://github.com/kmjungersen">Github</a></li>
-                <li><a href="/videos.html">Videos</a></li>
-                <li><a href="">JavaScript</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+<!--<header>-->
+<nav>
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Kurtis Jungersen</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="http://github.com/kmjungersen">Github</a></li>
+            <li><a href="/videos.html">Videos</a></li>
+            <li><a href="">JavaScript</a></li>
+        </ul>
+    </div>
+</nav>
+<!--</header>-->
 <main>
 
     <select id="videoSelector" onchange="changeVideo();">
-    <option value="carnage">Carnage on the Slopes</option>
-    <option value="tennis">Tennis Demo</option>
-    <option value="zombie">Zombie Defense Training Camp (Skeet
-    Shooting)
-    </option>
-    <option value="teddy">Teddy (First Person View)</option>
-    <option value="fryNight">Friday Night Fish Fry</option>
+        <option value="carnage">Carnage on the Slopes</option>
+        <option value="tennis">Tennis Demo</option>
+        <option value="zombie">Zombie Defense Training Camp (Skeet
+            Shooting)
+        </option>
+        <option value="teddy">Teddy (First Person View)</option>
+        <option value="fryNight">Friday Night Fish Fry</option>
     </select>
     <video id="videoPlayer"
            class="video-js vjs-default-skin vjs-big-play-centered" controls
