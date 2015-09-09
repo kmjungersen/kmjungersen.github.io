@@ -5,8 +5,13 @@ $(function () {
     function videoPageClass(player, selector) {
 
         var self = this;
-        self.baseUrl = "https://s3.amazonaws.com/kmjungersen.github.io.documents/videos/";
+        self.player = player;
+        self.selector = selector;
+        self.baseUrl = "https://s3.amazonaws.com/staging.kmjungersen.github.io/assets/videos/";
 
+        function init() {
+
+        }
 
         function changeVideo(videoSelection) {
 
@@ -18,12 +23,18 @@ $(function () {
 
         function changeVideoSrc(url) {
 
-            var videoPlayer = videojs("videoPlayer");
 
+            var videoJs = videojs(self.player[0], {}, function (){
+                console.log("foo");
+            });
+            //var video = $("videoPlayer");
             var fullUrl = self.baseUrl + url;
 
-            videoPlayer.src(fullUrl);
-            videoPlayer.load();
+            //video.attr("src", fullUrl);
+            //video.load();
+
+            videoJs.src(fullUrl);
+            self.player.load();
         }
 
         function changeTitle(title) {
