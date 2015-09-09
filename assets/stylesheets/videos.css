@@ -1,8 +1,14 @@
-video {
-    height: auto;
-    width: auto;
+.video-js {
+    height: 85% !important;
+    width: 90% !important;
+    position: fixed;
+    margin: 30px;
 }
 
 .nav-wrapper {
     color: #f5f5f5;
+}
+
+#videoSelector {
+    padding: 2em;
 }
