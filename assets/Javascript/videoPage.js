@@ -24,9 +24,7 @@ $(function () {
         function changeVideoSrc(url) {
 
 
-            var videoJs = videojs(self.player[0], {}, function (){
-                console.log("foo");
-            });
+            var videoJs = videojs(self.player[0], {}, function (){ });
             //var video = $("videoPlayer");
             var fullUrl = self.baseUrl + url;
 
@@ -53,6 +51,11 @@ $(function () {
 
         self.videoPlayer = $(player);
         self.videoSelector = $(selector);
+
+        self.videoSelector.material_select();
+
+        self.materialSelect = $(".select-wrapper").find(".caret");
+        self.materialSelect.html("");
 
         var queryStringSelection = getParameterByName("video");
         var initialSelection = self.videoSelector.val();
