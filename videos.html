@@ -1,192 +1,100 @@
 <!doctype html>
-`<html>
-  <head>
-      <title>Videos</title>
 
-      <link rel="stylesheet" href="static/stylesheets/styles.css">
-      <link rel="stylesheet" href="static/stylesheets/pygment_trac.css">
+<html>
+<head>
+    <title>Videos</title>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet"
+          type="text/css">
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <!--<script src="https://vjs.zencdn.net/4.12/video.js"></script>-->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="bower_components/materialize/dist/css/materialize.min.css"
+          rel="stylesheet" type="text/css">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+          rel="stylesheet" type="text/css">
 
-      <!-- Chang URLs to wherever Video.js files will be hosted -->
-      <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet" type="text/css">
-      <!-- video.js must be in the <head> for older IEs to work. -->
-      <script src="https://vjs.zencdn.net/4.12/video.js"></script>
+    <link href="assets/stylesheets/site.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/videos.css" rel="stylesheet"
+          type="text/css">
 
-      <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
-      <script>
-        videojs.options.flash.swf = "video-js/video-js.swf";
-      </script>
+<body>
+<!--<header>-->
+<nav>
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/" class="brand-logo">Kurtis Jungersen</a>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-field">
+                        <select id="videoSelector" style="visibility: hidden">
+                            <option value="carnage">Carnage on the Slopes
+                            </option>
+                            <option value="tennis">Tennis Demo</option>
+                            <option value="zombie">Zombie Defense Training Camp
+                                (Skeet
+                                Shooting)
+                            </option>
+                            <option value="teddy">Teddy (First Person View)
+                            </option>
+                            <option value="fryNight">Friday Night Fish Fry
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="http://github.com/kmjungersen">Github</a>
+                        </li>
+                        <li><a href="/videos.html">Videos</a></li>
+                        <li><a href="http://blog.kmjungersen.com">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--</header>-->
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
 
-      <script type="text/javascript">
+            </div>
+            <div class="col-md-4">
 
-          $(function() {
-
-              var video = getParameterByName("video");
-
-              if (video.length > 0) {
-                  var selector = document.getElementById("selector");
-                  selector.value = video;
-              }
-
-             changeVideo()
-          });
-
-
-              function changeVideo() {
-
-                  var selection = document.getElementById("selector").value;
-
-                  var object = findObject(selection);
-
-//                  changeTitle(object.title);
-
-                  changeVideoSrc(object.url)
-
-              }
-
-              function findObject(selection) {
-
-                  var newObject = null;
-
-                  var videoBaseUrl = "https://s3.amazonaws.com/kmjungersen.github.io.documents/videos/";
-
-                  var carnage = {
-                      url: videoBaseUrl + "carnage_on_the_slopes.mp4",
-                      title: "Carnage on the Slopes"
-                  };
-                  var tennis = {
-                      url: videoBaseUrl + "tennis_demo.mp4",
-                      title: "Tennis GoPro Demo"
-                  };
-                  var zombie = {
-                      url: videoBaseUrl + "zombie_defense.mp4",
-                      title: "Zombie Defense Training Camp"
-                  };
-                  var teddy={
-                      url: videoBaseUrl + "teddy.mp4",
-                      title: "Teddy"
-                  };
-                  var fryNight = {
-                      url: videoBaseUrl + "fry_night.mp4",
-                      title: "Friday Night Fish Fry"
-                  };
-
-                  switch(selection) {
-
-                      case "slope_carnage":
-
-                          newObject = carnage;
-
-                          break;
-
-                      case "tennis":
-
-                          newObject = tennis;
-
-                          break;
-
-                      case "zombie":
-
-                          newObject = zombie;
-
-                          break;
-
-                      case "teddy":
-
-                          newObject = teddy;
-
-                          break;
-
-                      case "fry_night":
-
-                          newObject = fryNight;
-
-                          break;
-
-                      default:
-
-                          newObject = carnage;
-
-                          break;
-
-                  }
-
-                  return newObject
-              }
-
-            function changeVideoSrc(url) {
-
-                var foo = videojs("video_player");
-
-                foo.src(url);
-
-                foo.load();
-
-            }
-
-          function changeTitle(title) {
-
-              var element = document.getElementById("title");
-
-              element.innerHTML = title
-          }
-
-//        Borrowed from a Stack overflow post at http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-          function getParameterByName(name) {
-              name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-              var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                  results = regex.exec(location.search);
-              return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-          }
-
-      </script>
-
-  </head>
-
-  <body class="videoPage">
-    <div class="wrapper">
-        <header>
-            <b class="title">Kurtis Jungersen - Videos</b>
-            <ul class="nav_bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="http://www.github.com/kmjungersen">Github</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="thesis.html">Thesis</a></li>
-            </ul>
-        </header>
-
-    <div class="standardSection">
-        <p>Please select a video to watch:
-
-            <select id="selector" onchange="changeVideo();">
-                <option value="slope_carnage">Carnage on the Slopes</option>
-                <option value="tennis">Tennis Demo</option>
-                <option value="zombie">Zombie Defense Training Camp (Skeet Shooting)</option>
-                <option value="teddy">Teddy (First Person View)</option>
-                <option value="fry_night">Friday Night Fish Fry</option>
-            </select>
-        </p>
-
-          <video id="video_player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="510"
-            data-setup='{}' align="middle">Your browser does not support the video tag.
-          </video>
-
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <video id="videoPlayer"
+                       class="video-js vjs-default-skin vjs-big-play-centered"
+                       controls
+                       preload="auto"
+                       data-setup='{}' align="middle">Your browser does not
+                    support the
+                    HTML5 video tag.
+                </video>
+            </div>
+        </div>
     </div>
 
-    <footer>
 
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist.</a></small></p>
+</main>
+<script src="bower_components/jquery/dist/jquery.min.js"
+        type="text/javascript"></script>
+<script src="bower_components/materialize/dist/js/materialize.min.js"
+        type="text/javascript"></script>
+<script src="bower_components/video.js/dist/video-js/video.js"
+        type="text/javascript"></script>
+<script src="assets/Javascript/videoPage.js" type="text/javascript"></script>
 
-        <p><small>&copy; Copyright 2015 by Kurtis Jungersen</small></p>
-
-        <!--Twitter follow button-->
-        <a href="https://twitter.com/kmjungersen" class="twitter-follow-button" data-show-count="false">Follow @kmjungersen</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-    </footer>
-
-    </div>
-  </body>
+</body>
 
 </html>
