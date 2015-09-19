@@ -11,4 +11,32 @@
 
 #videoSelector {
     padding: 2em;
+    margin-top: 1.5em;
 }
+
+.select-wrapper span.caret {
+    color: white;
+}
+
+.select-wrapper input.select-dropdown {
+    margin-top: 1.5em;
+    font-size: 1em;
+}
+
+.dropdown-content {
+    background: black;
+    /*color: white;*/
+    /*border: 1px solid white;*/
+}
+
+    .dropdown-content li {
+        border-bottom: 1px solid white;
+    }
+
+    .dropdown-content li:hover {
+        background: rgba(255,255,255,0.3);
+    }
+
+        .dropdown-content li>span {
+            color: white;
+        }

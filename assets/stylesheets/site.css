@@ -39,7 +39,7 @@ nav {
 }
 
     .nav-wrapper .brand-logo {
-        font-size: 1.6em;
+        font-size: 1.5em;
         padding: 1em 2em;
     }
 
@@ -49,6 +49,7 @@ nav {
 
     .nav-wrapper #nav-mobile li {
         padding: 1.5em;
+        line-height: 1.5em;
     }
 
     .nav-wrapper #nav-mobile li:hover {
@@ -57,7 +58,7 @@ nav {
     }
 
     .nav-wrapper #nav-mobile li a {
-        font-size: 14px;
+        font-size: 1em;
     }
 
 /*Section Styling*/
