@@ -2,99 +2,128 @@
  * Created by kmjungersen on 9/2/15.
  */
 $(function () {
-    function videoPageClass(player, selector) {
 
-        var self = this;
-        self.player = player;
-        self.selector = selector;
-        self.baseUrl = "https://s3.amazonaws.com/staging.kmjungersen.github.io/assets/videos/";
+    var videoPageHandler = (function() {
+        function Handler() {
+            var _self = this;
 
-        function init() {
+            _self.youtubePlayer = '.youtube-player';
+            _self.videoSelector = '#videoSelector';
+            _self.aspectRatio = .5625;
 
-        }
+            _self.baseUrl = 'https://www.youtube.com/embed/';
 
-        function changeVideo(videoSelection) {
-
-            var selection = self.videoMetaData[videoSelection];
-
-            //changeTitle(selection.title);
-            changeVideoSrc(selection.url);
-        }
-
-        function changeVideoSrc(url) {
-
-
-            var videoJs = videojs(self.player[0], {}, function (){ });
-            //var video = $("videoPlayer");
-            var fullUrl = self.baseUrl + url;
-
-            //video.attr("src", fullUrl);
-            //video.load();
-
-            videoJs.src(fullUrl);
-            self.player.load();
-        }
-
-        function changeTitle(title) {
-
-            var element = $("title");
-
-            element.text = title
-        }
-
-        function getParameterByName(name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-
-        self.videoPlayer = $(player);
-        self.videoSelector = $(selector);
-
-        self.videoSelector.material_select();
-
-        self.materialSelect = $(".select-wrapper").find(".caret");
-        self.materialSelect.html("");
-
-        var queryStringSelection = getParameterByName("video");
-        var initialSelection = self.videoSelector.val();
-
-        self.videoSelection = (queryStringSelection.length > 1) ? queryStringSelection : initialSelection;
-
-        self.videoMetaData = {
-            carnage: {
-                url: "carnage_on_the_slopes.mp4",
-                title: "Carnage on the Slopes"
-            },
-            tennis: {
-                url: "tennis_demo.mp4",
-                title: "Tennis GoPro Demo"
-            },
-            zombie: {
-                url: "zombie_defense.mp4",
-                title: "Zombie Defense Training Camp"
-            },
-            teddy: {
-                url: "teddy.mp4",
-                title: "Teddy"
-            },
-            fryNight: {
-                url: "fry_night.mp4",
-                title: "Friday Night Fish Fry"
+            _self.videoMetaData = {
+                carnage: {
+                    id: 'cmx3ouRT36I',
+                    title: 'Carnage on the Slopes'
+                },
+                tennis: {
+                    id: 'ZtDv_7-BgGQ',
+                    title: 'Tennis GoPro Demo'
+                },
+                zombie: {
+                    id: 'vivClBDyupE',
+                    title: 'Zombie Defense Training Camp'
+                },
+                teddy: {
+                    id: 'qzrjQj7mGmE',
+                    title: 'Teddy'
+                },
+                fryNight: {
+                    id: 'ND5ybEMpRyo',
+                    title: 'Friday Night Fish Fry'
+                }
             }
-        };
 
-        changeVideo(self.videoSelection);
+            _self.buildUrl = function(metaObject) {
+                var id = metaObject.id;
+                var url = _self.baseUrl + id;
 
-        self.videoSelector.change(function () {
-            changeVideo(self.videoSelector.val())
-        });
+                return url;
+            }
 
-    }
+            _self.getVideoUrl = function(selection) {
+                var selectedObject = _self.videoMetaData[selection];
+                var url = _self.buildUrl(selectedObject);
 
-    var player = $("#videoPlayer");
-    var selector = $("#videoSelector");
+                return url;
+            }
 
-    videoPageClass(player, selector)
+            _self.changeVideo = function(selection) {
+                var newUrl = _self.getVideoUrl(selection);
+
+                var $player = $(_self.youtubePlayer);
+                $player.attr('src', newUrl);
+            }
+
+            _self.getParameterByName = function(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+                var results = regex.exec(location.search);
+
+                return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+
+            _self.setPlayerHeight = function() {
+                var $youtubePlayer = $(_self.youtubePlayer);
+                var width = $youtubePlayer.width();
+                var newHeight = width * _self.aspectRatio;
+
+                $youtubePlayer.height(newHeight);
+                console.log(newHeight);
+            }
+
+            _self.waitForResize = function() {
+                var resizeTimer;
+
+                $(window).resize(function(e) {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(function() {
+                        _self.setPlayerHeight();
+                    }, 250);
+                });
+            }
+
+            _self.getInitialSelection = function() {
+                _self.$videoSelector = $(_self.videoSelector);
+                _self.$videoSelector.material_select();
+
+                var queryStringSelection = _self.getParameterByName('video');
+                var initialSelection = _self.$videoSelector.val();
+
+                var videoSelection = queryStringSelection || initialSelection;
+
+                _self.changeVideo(videoSelection);
+
+                //TODO - fix this
+                _self.$videoSelector.val(videoSelection);
+            }
+
+            _self.waitForSelection = function() {
+                _self.$videoSelector = $(_self.videoSelector);
+                _self.$videoSelector.change(function () {
+                    _self.changeVideo(_self.$videoSelector.val())
+                });
+            }
+
+            _self.init = function() {
+                _self.setPlayerHeight();
+                _self.waitForResize();
+
+                _self.getInitialSelection();
+                _self.waitForSelection();
+
+                var materialSelect = $(".select-wrapper").find(".caret");
+                materialSelect.html("");
+            }();
+
+        }
+
+        return {
+            Handler: Handler
+        }
+    })();
+
+    var videoHandler = new videoPageHandler.Handler();
 });
