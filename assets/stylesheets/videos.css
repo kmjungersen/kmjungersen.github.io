@@ -1,3 +1,27 @@
+.youtube-player-wrapper {
+    width: 100%;
+    padding: 5%;
+
+
+}
+
+.youtube-player {
+    height: auto;
+    width: 100%;
+    /*padding: auto;*/
+    /*height: 100%;*/
+    /*width: 400px*/
+    max-height: 731;
+    max-width: 1300px;
+}
+
+@media (min-width: 1470px) {
+    body .youtube-player-wrapper {
+        padding: 5% 20%;
+    }
+
+}
+
 .video-js {
     height: 85% !important;
     width: 90% !important;
