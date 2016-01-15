@@ -32,13 +32,11 @@ $(function () {
 
     var clickableArea = $(".click-down");
     clickableArea.click(function() {
-        console.log("foo");
        scroller.moveDown();
     });
 
     $(".flyIn-section").addClass("flyIn-init");
     $("section.active").addClass("flyIn-animate");
-    videojs.options.flash.swf = "video-js/video-js.swf";
 
     function stickyFooter(footerElement) {
 
@@ -64,4 +62,23 @@ $(function () {
 
     var footerElement = $(".page-footer");
     stickyFooter(footerElement);
+
+    function setVideoTitle() {
+        var $videoTitle = $('#section-3 article');
+
+        var windowHeight = $(window).height();
+        var newHeight = 2 * windowHeight;
+
+        $videoTitle.css('top', newHeight.toString() + 'px');
+    }
+
+    function fixTitleOnVideoPage() {
+        setVideoTitle();
+        $(window).resize(function() {
+            setVideoTitle();
+        });
+    }
+
+    fixTitleOnVideoPage();
+
 });
