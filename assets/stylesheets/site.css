@@ -15,12 +15,22 @@ body {
   }
 
 a {
-    color: #4DB8FF;
+    color: #fff;
+    transition: color 0.3s linear;
+    /*background-color: rgba(0,0,0,0.5);*/
+    /*filter: blur(5px);*/
 }
 
 a:hover {
     /*TODO: fix this*/
-    color: #68C3EF;
+    color: #aaa;
+    transition: color 0.5s linear;
+    text-decoration: none;
+}
+
+a:visited,
+a:focus {
+    color: #fff;
     text-decoration: none;
 }
 
@@ -78,9 +88,9 @@ nav {
     background-size: cover;
 }
 
-#section-3 {
-    /*background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/gopro-skiing-big-accorn.mp4") center no-repeat;*/
-    /*background-size: cover;*/
+#section-3 article {
+    position: fixed;
+    top: 1400px;
 }
 
 #section-4 {
@@ -129,21 +139,8 @@ nav {
     padding: 0;
 }
 
-
-/* Live View Panel */
-section video {
+#player {
     opacity: 0.5;
-    position: fixed;
-    /* top: 50%; */
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%);
-    background-image: url("../images/clouds.jpg");
-    background-size: cover;
 }
 
 /*Side Navbar*/
@@ -158,24 +155,34 @@ section video {
     list-style-type: none;
     padding: 0;
     margin:0;
+    top: 36%;
 }
 
     .onepage-pagination li {
         /*padding: 0;*/
+        padding: 20px;
+        height: 4px;
+        width: 4px;
+        margin-right: 14px;
     }
 
     .onepage-pagination li a {
-        height: 10px;
-        width: 10px;
-        border-right: 1px solid #f5f5f5;
-        /*border-radius: 6px;*/
+        height: 5px;
+        width: 5px;
+        background-color: white;
+        padding: 0;
+        /*border-right: 1px solid #f5f5f5;*/
+        border-radius: 6px;
     }
 
     .onepage-pagination li a.active {
+        height: 8px;
+        width: 8px;
         list-style: none;
-        border-right: 3px solid #f5f5f5;
-        background: url("../icons/arrow-alt-right.png") no-repeat center;
-        background-size: cover;
+        /*border-right: 3px solid #f5f5f5;*/
+        /*background: url("../icons/arrow-alt-right.png") no-repeat center;*/
+        /*background-size: cover;*/
+        /*background-color: blue;*/
         /*background-color: #DCDCDC;*/
         margin-right: 10px;
     }
