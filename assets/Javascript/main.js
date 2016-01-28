@@ -37,6 +37,7 @@ $(function () {
 
     $(".flyIn-section").addClass("flyIn-init");
     $("section.active").addClass("flyIn-animate");
+    videojs.options.flash.swf = "video-js/video-js.swf";
 
     function stickyFooter(footerElement) {
 
