@@ -29,7 +29,7 @@ var homePageHandler = (function() {
         }
 
         _self.waitForScroll = function() {
-            var $landingPageWrapper = $('.landing-page-wrapper');
+            var $landingPageWrapper = $('.location-wrapper');
             var height = 0;
             var scrollDistance = 0;
             var fadeTrigger = 0;

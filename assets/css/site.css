@@ -6668,6 +6668,10 @@ body {
   .flex-list li:first-child {
     border: none; }
 
+.code-text {
+  font-size: 0.8em;
+  color: #add2a1; }
+
 .timeline {
   margin: 0;
   padding: 0;
@@ -6857,8 +6861,10 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/keyboard.JPG") center no-repeat;
   background-size: cover;
   color: #E7EBE1;
-  margin-top: 0;
-  padding-top: 30%; }
+  margin-top: 0; }
+  .location-wrapper .container {
+    position: relative;
+    top: 20%; }
 
 .sub-section-header {
   text-align: center; }

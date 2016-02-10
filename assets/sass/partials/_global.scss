@@ -33,4 +33,8 @@ body {
         border: none;
     }
 }
- 
+
+.code-text {
+    font-size: 0.8em;
+    color: lighten($theme-green, 30%);
+}
