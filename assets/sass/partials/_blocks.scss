@@ -1,0 +1,45 @@
+.full-stack-blocks {
+    margin: auto;
+
+    .full-stack-block {
+        clear: both;
+        .block-content {
+            padding: 2em 2em;
+            margin: 1em;
+            text-align: center;
+
+            .block-header {
+                font-size: $font-large;
+            }
+
+            .skills-list {
+                list-style-type: none;
+                padding: 1em 0;
+
+                li {
+                    padding-bottom: 0.5em;
+                }
+            }
+        }
+
+        &.blue-block .block-content {
+            // border: 1px solid $theme-blue;
+            background-color: rgba($theme-blue, 0.4);
+        }
+
+        &.red-block .block-content {
+            // border: 1px solid $theme-red;
+            background-color: rgba($theme-red, 0.4);
+        }
+
+        &.green-block .block-content {
+            // border: 1px solid $theme-green;
+            background-color: rgba($theme-green, 0.4);
+
+        }
+    }
+
+    .flex-list  li {
+        border: none !important;
+    }
+}

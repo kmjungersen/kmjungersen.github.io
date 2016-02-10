@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
+
+body {
+    background-color: $background-color;
+    color: $default-font-color !important;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: $default-font-weight;
+    font-size: $font-medium;
+}
+
+.flex-list {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
+}
+.flex-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1px;
+    list-style-type: none;
+}
+.flex-list li {
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: .25em 0;
+    padding: 0 1em;
+    text-align: center;
+    // border-left: 1px solid $theme-green;
+
+    &:first-child {
+        border: none;
+    }
+}
+ 

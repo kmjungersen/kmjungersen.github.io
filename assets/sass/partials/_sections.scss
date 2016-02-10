@@ -1,0 +1,79 @@
+.section {
+    margin-top: 2em;
+}
+
+.landing-page-wrapper {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/GOPR0240.JPG") center no-repeat;
+    background-size: cover;
+}
+
+.landing-page {
+    text-align: center;
+
+    .main-title {
+        padding-top: 25%;
+        color: $theme-white;
+        font-weight: $default-font-weight;
+    }
+}
+
+.section-header {
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+    margin: 3em 1em;
+}
+
+.sub-section-header {
+    font-size: $font-large;
+}
+
+.timeline-wrapper {
+    margin-top: 6em;
+
+    .container {
+
+    }
+
+}
+
+.resume-wrapper {
+    background-color: $theme-white;
+    margin: 3em;
+    padding-bottom: 3em;
+
+    .page-staple {
+        background-color: $theme-black;
+        width: 60px;
+        height: 2px;
+        position: relative;
+        top: 40px;
+        left: 15px;
+        transform: rotate(-45deg);
+    }
+}
+
+.section-wrapper {
+    margin: 6em 1em;
+    text-align: center;
+    font-size: 2em;
+}
+
+// .landing-page-wrapper,
+.location-wrapper {
+    background-color: $theme-black;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/keyboard.JPG") center no-repeat;
+    background-size: cover;
+    color: $theme-white;
+    margin-top: 0;
+    padding-top: 30%;
+}
+
+// .skills-wrapper, .language-wrapper {
+//     text-align: center;
+//     margin-top: 12em;
+// }
+
+.sub-section-header {
+    text-align: center;
+}
