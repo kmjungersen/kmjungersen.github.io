@@ -2,6 +2,10 @@
 
 body {
     background-color: $background-color;
+    // background-image: url("../images/wood_texture_by_shadow3.jpg");
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/wood_texture_by_shadowh3.jpg") repeat;
+    // /Users/kmjungersen/COS/kmjungersen.github.io/assets/images/wood_texture_by_shadowh3.jpg
+    // background-repeat: repeat-y;
     color: $default-font-color !important;
     font-family: 'Lato', sans-serif !important;
     font-weight: $default-font-weight;
@@ -37,4 +41,14 @@ body {
 .code-text {
     font-size: 0.8em;
     color: lighten($theme-green, 30%);
+}
+
+.theme-white {
+    color: $theme-white;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

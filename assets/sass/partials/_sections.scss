@@ -61,15 +61,26 @@
 
 // .landing-page-wrapper,
 .location-wrapper {
-    background-color: $theme-black;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/keyboard.jpg") center no-repeat;
+    // background-color: $theme-black;
+    // background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../images/macbook-air.jpg") center no-repeat;
     background-size: cover;
     color: $theme-white;
     margin-top: 0;
+    min-height: 730px;
 
     .container {
         position: relative;
         top: 20%;
+    }
+
+    .marvel-device {
+        display: block;
+        position: relative;
+        top: -142px;
+        
+        .screen {
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/gopro.jpg") center no-repeat;
+        }
     }
 }
 
@@ -80,4 +91,17 @@
 
 .sub-section-header {
     text-align: center;
+}
+
+.video-wrapper {
+    .marvel-device {
+        .screen {
+            overflow: hidden;
+            video {
+                height: 100%;
+                position: relative;
+                left: -12%;
+            }
+        }
+    }
 }
