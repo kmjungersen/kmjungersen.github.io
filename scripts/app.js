@@ -4,14 +4,14 @@ var homePageHandler = (function() {
         var _self = this;
 
         _self.fullScreenElements = [
-            '.landing-page',
+            // '.landing-page',
             '.location-wrapper'
         ]
 
         _self.init = function() {
             _self.setFullScreenPageSizes();
             _self.waitForResize();
-            _self.waitForScroll();
+            // _self.waitForScroll();
         }
 
         _self.setFullScreenPageSizes = function() {
