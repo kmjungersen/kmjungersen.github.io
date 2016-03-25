@@ -2,3 +2,5 @@
 .idea/
 config.yml
 history.lock
+node_modules/
+fonts/
