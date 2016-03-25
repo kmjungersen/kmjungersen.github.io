@@ -1,0 +1,30 @@
+{
+  "name": "kmjungersen.github.io",
+  "description": "Kurtis Jungersen's Personal Portfolio",
+  "main": "index.js",
+  "authors": [
+    "kmjungersen@gmail.com"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kmjungersen/kmjungersen.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "classie": "~1.0.1",
+    "jquery": "~2.1.4",
+    "Materialize": "materialize#~0.97.0",
+    "modernizer": "~2.8.2",
+    "onepage-scroll": "~1.3.1",
+    "video.js": "videojs#~4.12.15"
+  },
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}
