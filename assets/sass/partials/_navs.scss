@@ -1,0 +1,73 @@
+nav {
+    background-color: $black;
+    color: $white;
+    height: $navbar-height;
+    display: block;
+    margin-top: -$navbar-height;
+    padding-top: $navbar-height;
+
+    .nav-wrapper {
+        line-height: 1.5em;
+
+        .brand-logo {
+            font-size: 1.1em;
+            padding: 1em 1.5em;
+        }
+
+        .navbar-list {
+            padding-right: 1em;
+            list-style: none;
+            margin-top: 0;
+
+            li {
+                display: inline-block;
+                float: right;
+            }
+        }
+
+        #nav-mobile {
+            li {
+                padding: 1em 1.5em;
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+
+
+
+.onepage-pagination {
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+    top: 36%;
+
+    li {
+        padding: 0;
+        height: 40px;
+        width: 40px;
+        margin-right: 14px;
+
+        a {
+            height: 4px;
+            width: 4px;
+
+            padding: 18px;
+            // border-radius: 6px;
+
+            &:before {
+                background: $white;
+                height: 4px;
+                width: 4px;
+            }
+
+            &.active:before {
+                width: 6px;
+                height: 6px;
+                background: $white;
+                border: none;
+                left: 16px;
+            }
+        }
+    }
+}

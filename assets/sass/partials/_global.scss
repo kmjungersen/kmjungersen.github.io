@@ -1,0 +1,30 @@
+body {
+    background-color: $black;
+    text-align: center;
+}
+
+a{
+    color: $white;
+    transition: color 0.3s linear;
+    text-decoration: none;
+
+    &:hover {
+        color: $grey;
+        transition: 0.5s linear;
+        text-decoration: none;
+    }
+
+    &:visited,
+    &:focus {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
