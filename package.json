@@ -1,0 +1,23 @@
+{
+  "name": "kmjungersen.github.io",
+  "version": "0.5.0",
+  "description": "Personal Portfolio =====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmjungersen/kmjungersen.github.io.git"
+  },
+  "author": "kmjungersen@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmjungersen/kmjungersen.github.io/issues"
+  },
+  "homepage": "https://github.com/kmjungersen/kmjungersen.github.io#readme",
+  "dependencies": {
+    "bourbon": "^4.2.6",
+    "grunt": "^0.4.5"
+  }
+}
