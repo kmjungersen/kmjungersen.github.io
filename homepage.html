@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+            crossorigin="anonymous">
+
+        <style type="text/css">
+            body {
+                background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('assets/images/homepage-background.jpeg') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+
+            h1, h2 {
+                color: #eee;
+            }
+
+            .card-header >:last-child,
+    		.card-block >:last-child {
+    			margin-bottom: 0;
+    		}
+
+    		.page-header {
+    			padding: 50px 0;
+    		}
+
+    		.page-content {
+    			padding: 25px 0;
+    		}
+
+    		.client {
+    			margin-bottom: 25px;
+    		}
+
+    		.table-flush {
+    			margin: 0;
+    		}
+
+    		.table-flush > tbody > tr:first-child > td {
+    			border-top: none;
+    		}
+
+            .btn-row {
+                margin-bottom: 1em;
+            }
+        </style>
+        <meta charset="utf-8">
+        <title>Kurtis' Home Page</title>
+    </head>
+    <body>
+
+        <div class="page-header">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-xs-12">
+    					<h1>Kurtis' Home Page</h1>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="page-content">
+
+    		<div class="container">
+
+    			<div class="client">
+    				<div class="row">
+    					<div class="col-xs-12">
+    						<h2>Infinity</h2>
+    					</div>
+    				</div>
+    				<div class="row btn-row">
+    					<div class="col-md-4 col-lg-3"><a class="btn btn-primary btn-block" href="https://ibis.infinity-software.com/">IBIS</a></div>
+    					<div class="col-md-4 col-lg-3"><a class="btn btn-primary btn-block" href="https://infinitysoftware.atlassian.net">Jira</a></div>
+                        <div class="col-md-4 col-lg-3"><a class="btn btn-primary btn-block" href="https://mantis.isd-devnet.com">Mantis</a></div>
+                        <div class="col-md-4 col-lg-3"><a class="btn btn-primary btn-block" href="http://visdtfs2013:8080/tfs/SLACAL/SLAS/_versionControl/changesets">TFS Online</a></div>
+    				</div>
+                    <div class="row btn-row">
+                        <div class="col-md-4 col-lg-3"><input class="form-control" autofocus="autofocus" id="mantisID" type="text" placeholder="Mantis #"></div>
+                        <div class="col-md-4 col-lg-3"><a id="mantisGo" class="btn btn-primary btn-block">Find Mantis Ticket(s)</a></div>
+                        <div class="col-md-4 col-lg-3"><input class="form-control" autofocus="autofocus" id="jiraID" type="text" placeholder="Jira #"></div>
+                        <div class="col-md-4 col-lg-3"><a id="jiraGo" class="btn btn-primary btn-block">Find Jira Ticket(s)</a></div>
+                    </div>
+    			</div>
+
+    			<div class="client">
+
+    				<div class="row">
+    					<div class="col-xs-12">
+    						<h2>Surplus Line Association of California</h2>
+    					</div>
+    				</div>
+
+    				<div class="row">
+
+					<!-- RAPID -->
+					<div class="col-xs-12 col-md-6 col-xl-4">
+						<div class="card">
+							<div class="card-header">
+								<h3>RAPID</h3>
+							</div>
+							<table class="table table-flush">
+								<tbody>
+									<tr>
+										<td>Local</td>
+										<td><a href="http://localhost:50482">RAPID Local</a></td>
+									</tr>
+									<tr>
+										<td>Development</td>
+										<td><a href="http://rapid.slacal">RAPID Dev</a></td>
+									</tr>
+									<tr>
+										<td>QA</td>
+										<td><a href="http://rapid-qa.slacal.org/">RAPID QA</a></td>
+									</tr>
+									<tr>
+										<td>Train</td>
+										<td><a href="https://rapid-train.slacal.org">RAPID Train</a></td>
+									</tr>
+									<tr>
+										<td>Production</td>
+										<td><a href="https://rapid.slacal.org">RAPID PROD</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+    					<!-- SLIP -->
+    					<div class="col-xs-12 col-md-6 col-xl-4">
+    						<div class="card">
+    							<div class="card-header">
+    								<h3>SLIP</h3>
+    							</div>
+    							<table class="table table-flush">
+    								<tbody>
+    									<tr>
+    										<td>Local</td>
+    										<td><a href="http://localhost:50519">SLIP Local</a></td>
+    									</tr>
+    									<tr>
+    										<td>Development</td>
+    										<td><a href="http://slip.slacal">SLIP Dev</a></td>
+    									</tr>
+    									<tr>
+    										<td>QA</td>
+    										<td><a href="http://slip-qa.slacal.org/">SLIP QA</a></td>
+    									</tr>
+    									<tr>
+    										<td>Train</td>
+    										<td><a href="https://slip-train.slacal.org">SLIP Train</a></td>
+    									</tr>
+    									<tr>
+    										<td>Production</td>
+    										<td><a href="https://slip.slacal.org">SLIP Prod</a></td>
+    									</tr>
+    								</tbody>
+    							</table>
+    						</div>
+    					</div>
+
+    					<!-- Indexer -->
+    					<div class="col-xs-12 col-md-6 col-xl-4">
+    						<div class="card">
+    							<div class="card-header">
+    								<h3>Indexer</h3>
+    							</div>
+    							<table class="table table-flush">
+    								<tbody>
+    									<tr>
+    										<td>QA</td>
+    										<td><a href="http://www-qa.slacal.org">www-qa.slacal.org</a></td>
+    									</tr>
+    									<tr>
+    										<td>Production</td>
+    										<td><a href="http://www.slacal.org">www.slacal.org</a></td>
+    									</tr>
+    								</tbody>
+    							</table>
+    						</div>
+    					</div>
+
+                        <!-- Website -->
+    					<div class="col-xs-12 col-md-6 col-xl-4">
+    						<div class="card">
+    							<div class="card-header">
+    								<h3>Website</h3>
+    							</div>
+    							<table class="table table-flush">
+    								<tbody>
+    									<tr>
+    										<td>QA</td>
+    										<td><a href="http://www-qa.slacal.org">www-qa.slacal.org</a></td>
+    									</tr>
+    									<tr>
+    										<td>Production</td>
+    										<td><a href="http://www.slacal.org">www.slacal.org</a></td>
+    									</tr>
+    								</tbody>
+    							</table>
+    						</div>
+    					</div>
+    			<!-- /.client -->
+    		</div>
+    	</div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function() {
+            function OpenInNewTab(url) {
+              var win = window.open(url, '_blank');
+              win.focus();
+            }
+
+            function setupKeyupEvent(textFieldID, buttonID) {
+                $(textFieldID).keyup(function(event) {
+                    if (event.keyCode == 13) {
+                        $(buttonID).click();
+                    }
+                });
+            }
+
+            function setupTicketSearch(textFieldID, buttonID, url) {
+                setupKeyupEvent(textFieldID, buttonID);
+
+                $(buttonID).click(function(e) {
+                    e.preventDefault();
+
+                    var ids = $(textFieldID).val();
+                    var idArray = ids;
+
+                    var splits = [',', ' ', '.'];
+
+                    $.each(splits, function(i, splitChar) {
+                        var splitArray = ids.split(splitChar);
+
+                        idArray = splitArray.length > 1 ? splitArray : idArray;
+                    });
+
+                    if (idArray.length <= 1) {
+                        var newUrl = url + id;
+
+                        window.location.href = url + id;
+
+                        return;
+                    }
+
+                    $.each(idArray, function(i, id) {
+                        debugger;
+                        var newUrl = url + id;
+
+                        var win = window.open(newUrl, '_blank');
+
+                        win.focus();
+                    });
+                });
+            }
+
+            var mantisUrl = "http://mantis.isd-devnet.com/view.php?id=";
+            var jiraUrl = "https://infinitysoftware.atlassian.net/browse/CA-";
+
+            setupTicketSearch('#mantisID', '#mantisGo', mantisUrl);
+            setupTicketSearch('#jiraID', '#jiraGo', jiraUrl);
+
+            $("mantisID").focus();
+        });
+    </script>
+</html>
+
+<!-- 33403 33469 33459 -->
