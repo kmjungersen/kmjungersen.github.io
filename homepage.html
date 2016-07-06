@@ -232,7 +232,7 @@
                     e.preventDefault();
 
                     var ids = $(textFieldID).val();
-                    var idArray = ids;
+                    var idArray = [ids];
 
                     var splits = [',', ' ', '.'];
 
@@ -243,15 +243,14 @@
                     });
 
                     if (idArray.length <= 1) {
-                        var newUrl = url + id;
+                        var newUrl = url + ids;
 
-                        window.location.href = url + id;
+                        window.location.href = newUrl;
 
                         return;
                     }
 
                     $.each(idArray, function(i, id) {
-                        debugger;
                         var newUrl = url + id;
 
                         var win = window.open(newUrl, '_blank');
