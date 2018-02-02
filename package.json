@@ -19,5 +19,9 @@
   "dependencies": {
     "bourbon": "^4.2.6",
     "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
   }
 }
